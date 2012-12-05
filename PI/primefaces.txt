@@ -1,0 +1,20 @@
+Primefaces
+
+input:
+
+inputmask,calendar, password (opções senha), inplace (alterar, importante)
+
+button:
+commandbutton(validação)
+
+data:
+
+carousel, ring e datagrid (listar funcionarios), data exporter(relatorios), DataTable(listar).
+
+Panel: 
+Wizard(cadastros)
+
+Overlay:
+confirmDialog,lightbox
+
+Messages

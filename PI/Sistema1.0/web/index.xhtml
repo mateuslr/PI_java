@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+        <link type="text/css" rel="stylesheet" href="css/custom-theme/jquery-ui-1.9.2.custom.css" /> 
+        <link type="text/css" rel="stylesheet" href="css/custom-theme/estilo.css" /> 
+    </h:head>
+    <h:body>
+
+        <p:layout fullPage="true">
+
+            <p:layoutUnit position="north" size="190"  resizable="true"  collapsible="true" >
+                <div id="topo2" align="center" size="100%">
+
+                    <a href="index.faces"><p:graphicImage value="img/logo.png" id="logo"/></a>
+                </div>
+                <div id="topo1">
+                    <h:form>
+                        <p:dock position="top">
+                            <p:menuitem value="cadPessoaJuridica" icon="img/1.PNG" action="#{pessoaJuridicaControle.novo()}" ajax="false"/>
+                            <p:menuitem value="cadMesa" icon="img/6.png" action="#{mesaControle.novo()}" ajax="false"/>
+                            <p:menuitem value="cadFornecedor" icon="img/2.png" action="#{fornecedorControle.novo()}" ajax="false"/>
+                            <p:menuitem value="cadIngrediente" icon="img/2.png" action="#{ingredienteControle.novo()}" ajax="false"/>
+                            <p:menuitem value="cadFunc" icon="img/7.png" action="#{funcionarioControle.novo()}" ajax="false"/>
+                            <p:menuitem value="cadClienteTele" icon="img/5.png" action="#{pessoaControle.novo()}" ajax="false"/>
+                            <p:menuitem value="cadClienteTeleCadastrado" icon="img/8.png"  action="#{clienteTeleCadastradoControle.novo()}" ajax="false"/>
+                            <p:menuitem value="cadClienteOnline" icon="img/9.png" action="#{clienteOnlineControle.novo()}" ajax="false"/>
+                        </p:dock>
+                    </h:form>
+                </div>
+
+            </p:layoutUnit>
+
+            <p:layoutUnit position="west" size="200" header="Right" resizable="true" closable="false" collapsible="true" effect="drop" collapsed="true">
+                <h:outputText value="Right unit content." />
+            </p:layoutUnit>
+
+            <ui:insert name="center">
+                <p:layoutUnit position="center" header="">
+
+                </p:layoutUnit>
+
+                <p:layoutUnit position="east" header="" size="300">
+                    <p:stack icon="img/original.png">  
+                        <p:menuitem value="fornecedor" icon="img/10.png" url="cadFornecedor.faces"/>  
+                        <p:menuitem value="tele" icon="img/11.png" url="cadClienteTeleCadastrado.faces"/>  
+                        <p:menuitem value="online" icon="img/12.png" url="cadClienteOnline.faces"/>        
+                    </p:stack>
+                </p:layoutUnit>
+            </ui:insert>
+
+        </p:layout>
+    </h:body>
+</html>
+
